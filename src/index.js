@@ -1,4 +1,9 @@
-import './style.css';
-import component from './modules/component.js';
+// import './style.css';
+// import component from './modules/component.js';
 
-window.onload = component();
+// window.onload = component();
+
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
