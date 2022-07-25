@@ -37,3 +37,15 @@ main {
   align-items: center;
   gap: 30px;
 }
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  position: fixed;
+  bottom: 3px;
+  padding:1% 5%;
+  border-top: solid 2px #000;
+}
+
+
