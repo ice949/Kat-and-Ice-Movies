@@ -1,8 +1,13 @@
-import './style.css';
+import "./style.css";
 
-import getMovies from './modules/renderMovies.js';
+import getMovies from "./modules/renderMovies.js";
 
-window.addEventListener('DOMContentLoaded', () => {
+import renderLikes from "./modules/likes.js";
+
+window.addEventListener("DOMContentLoaded", () => {
   // listContainer.innerHTML = ' ';
   getMovies();
+  renderLikes()
 });
+
+// getLikes();
