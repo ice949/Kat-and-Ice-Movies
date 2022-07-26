@@ -1,4 +1,8 @@
 import './style.css';
-// import component from './modules/component.js';
 
+import getMovies from './modules/component.js';
 
+window.addEventListener('DOMContentLoaded', () => {
+  // listContainer.innerHTML = ' ';
+  getMovies();
+});
