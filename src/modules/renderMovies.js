@@ -45,6 +45,7 @@ commentBtn.addEventListener('click', (e) => {
   e.preventDefault;
   let id = e.target.id;
   popup(id, movies);
+  console.log(popup);
 })
 
   });

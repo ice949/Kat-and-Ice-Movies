@@ -14,7 +14,7 @@ const popup = (ID,arr) => {
   popDiv.classList.add('pop_up');
   const closeDiv = document.createElement('div');
   closeDiv.classList.add('close_div');
-  closeDiv.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+  closeDiv.innerHTML = `<i class="fa-solid fa-xmark close-btn"></i>`;
   const popImage = document.createElement('img');
   popImage.setAttribute('src', `${movie.image}`);
   const title = document.createElement('h2');
@@ -22,23 +22,23 @@ const popup = (ID,arr) => {
   const specs1 = document.createElement('div');
   specs1.classList.add('specs');
   const language = document.createElement('p');
-  language.innerHTML = `${movie.language}`;
+  language.innerHTML = `Name: ${movie.language}`;
   const rating = document.createElement('p');
-  rating.innerHTML = `${movie.rating}`;
+  rating.innerHTML = `Rating: ${movie.rating}`;
 
   specs1.appendChild(language);
   specs1.appendChild(rating);
   
   
-  const specs2 = document.createElement('div');
-  specs2.classList.add('specs');
-  const genre = document.createElement('p');
-  genre.innerHTML = `${movie.genre}`;
-  const summary = document.createElement('p');
-  summary.innerHTML = `${movie.summary}`;
+  // const specs2 = document.createElement('div');
+  // specs2.classList.add('specs');
+  // const genre = document.createElement('p');
+  // genre.innerHTML = `${movie.genre}`;
+  // const summary = document.createElement('p');
+  // summary.innerHTML = `${movie.summary}`;
 
-  specs2.appendChild(genre);
-  specs2.appendChild(summary);
+  // specs2.appendChild(genre);
+  // specs2.appendChild(summary);
 
   const commentsDiv = document.createElement('div');
   commentsDiv.classList.add('comments_div');
@@ -76,13 +76,18 @@ const popup = (ID,arr) => {
   popDiv.appendChild(popImage);
   popDiv.appendChild(title);
   popDiv.appendChild(specs1);
-  popDiv.appendChild(specs2);
+  // popDiv.appendChild(specs2);
   popDiv.appendChild(commentsDiv);
   popDiv.appendChild(commentForm);
 
   popupContainer.append(popDiv);
 
+  const closeBtn = document.querySelector('.close-btn')
 
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    popupContainer.innerHTML = "";
+  })
 }
 export default popup;
 
