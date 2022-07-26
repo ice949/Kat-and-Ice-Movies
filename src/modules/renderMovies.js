@@ -1,5 +1,5 @@
-import addLike from "./likes.js";
-import popup from "./popwindow.js";
+import addLike from './likes.js';
+import popup from './popwindow.js';
 
 // import addLike from "./modules/likes";
 
@@ -36,22 +36,19 @@ const renderMovie = (movieList) => {
 
     MoviesContainer.appendChild(indmov);
 
-  LikeDiv.firstChild.addEventListener("click",  (e) => {
-    let BTN = e.target.parentElement;
-    let numBtn = BTN.getElementsByTagName('p')[0].getElementsByTagName('span')[0]
-    addLike(e.target.id, numBtn);
-  });
-commentBtn.addEventListener('click', (e) => {
-  e.preventDefault;
-  let id = e.target.id;
-  popup(id, movies);
-  console.log(popup);
-})
-
+    LikeDiv.firstChild.addEventListener('click', (e) => {
+      const BTN = e.target.parentElement;
+      const numBtn = BTN.getElementsByTagName('p')[0].getElementsByTagName('span')[0];
+      addLike(e.target.id, numBtn);
+    });
+    commentBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const { id } = e.target;
+      popup(id, movies);
+      // console.log(popup);
+    });
   });
 };
-
-
 
 const getMovies = async () => {
   const res = await fetch(url);
