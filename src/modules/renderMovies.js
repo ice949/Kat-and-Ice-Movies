@@ -1,4 +1,5 @@
 import addLike from "./likes.js";
+import popup from "./popwindow.js";
 
 // import addLike from "./modules/likes";
 
@@ -40,8 +41,16 @@ const renderMovie = (movieList) => {
     let numBtn = BTN.getElementsByTagName('p')[0].getElementsByTagName('span')[0]
     addLike(e.target.id, numBtn);
   });
+commentBtn.addEventListener('click', (e) => {
+  e.preventDefault;
+  let id = e.target.id;
+  popup(id, movies);
+})
+
   });
 };
+
+
 
 const getMovies = async () => {
   const res = await fetch(url);
