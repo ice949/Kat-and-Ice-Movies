@@ -1,3 +1,94 @@
-#test {
-  color: red;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2% 8%;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 1% 5%;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #000;
+  border-radius: 50%;
+  padding: 30px;
+  height: 150px;
+  width: 150px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 25px;
+}
+
+.main-nav a {
+  color: rgb(39, 15, 85);
+}
+
+.movies {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 200px 0;
+}
+
+.ind-mov {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 30%;
+}
+
+.ind-mov img {
+  width: 100%;
+  height: 150px;
+}
+
+.name-like {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: orchid;
+  gap: 5px;
+}
+
+button {
+  padding: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  bottom: 3px;
+  padding: 2% 5%;
+  border-top: solid 4px #000;
 }

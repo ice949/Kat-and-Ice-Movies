@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#test {\r\n  color: red;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  list-style: none;\n  text-decoration: none;\n}\n\nmain {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  padding: 2% 5%;\n}\n\n.main-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n}\n\n.logo {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border: 2px solid #000;\n  border-radius: 50%;\n  padding: 30px;\n  height: 150px;\n  width: 150px;\n}\n\n.main-nav {\n  display: flex;\n  align-items: center;\n  gap: 30px;\n}\n\nfooter {\n  display: flex;\n  justify-content: flex-start;\n  width: 100%;\n  position: fixed;\n  bottom: 3px;\n  padding:1% 5%;\n  border-top: solid 2px #000;\n}\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -472,22 +472,6 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
-/***/ }),
-/* 11 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const component = () => {
-  const element = document.getElementById('test');
-  element.innerHTML = 'Welcome';
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component);
-
-
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -556,17 +540,21 @@ const component = () => {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _modules_component_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+
+// import component from './modules/component.js';
 
 
-
-window.onload = (0,_modules_component_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
 })();
 

@@ -1,9 +1,8 @@
-// import './style.css';
-// import component from './modules/component.js';
+import './style.css';
 
-// window.onload = component();
+import getMovies from './modules/renderMovies.js';
 
-function sum(a, b) {
-  return a + b;
-}
-module.exports = sum;
+window.addEventListener('DOMContentLoaded', () => {
+  // listContainer.innerHTML = ' ';
+  getMovies();
+});
