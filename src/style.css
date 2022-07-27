@@ -78,6 +78,11 @@ main {
   gap: 5px;
 }
 
+.name-like {
+  display: flex;
+  justify-content: space-between;
+}
+
 button {
   padding: 10px;
 }

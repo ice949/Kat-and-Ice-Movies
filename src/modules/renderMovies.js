@@ -1,5 +1,6 @@
-import addLike from './likes.js';
 import popup from './popwindow.js';
+
+const { addLike, getLikes } = require('./likes.js');
 
 // import addLike from "./modules/likes";
 
@@ -11,6 +12,7 @@ const renderMovie = (movieList) => {
   movies.forEach((movie) => {
     const indmov = document.createElement('div');
     indmov.classList.add('ind-mov');
+    indmov.id = `${movie.id}`;
     indmov.innerHTML = `<img src="${movie.image.medium}" />`;
     const nameAndLikeDiv = document.createElement('div');
     nameAndLikeDiv.classList.add('name-like');
@@ -20,7 +22,7 @@ const renderMovie = (movieList) => {
     const LikeDiv = document.createElement('div');
     LikeDiv.classList.add('like-icon');
     LikeDiv.id = `${movie.id}`;
-    LikeDiv.innerHTML = `<i class="fa-solid fa-heart like-btn" id="${movie.id}"></i> <p><span></span> Likes</p>`;
+    LikeDiv.innerHTML = `<i class="fa-solid fa-heart like-btn" id="${movie.id}"></i> <p><span class="lik" id="${movie.id}"></span> Likes</p>`;
     nameAndLikeDiv.appendChild(movTitle);
     nameAndLikeDiv.appendChild(LikeDiv);
     const commentBtn = document.createElement('button');
@@ -47,6 +49,10 @@ const renderMovie = (movieList) => {
       popup(id, movies);
       // console.log(popup);
     });
+
+    const { id } = indmov;
+    const numBtn = indmov.querySelector('.lik');
+    getLikes(id, numBtn);
   });
 };
 
