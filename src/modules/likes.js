@@ -19,10 +19,10 @@ const addLike = async (ID, BTN) => {
       item_id: ID,
     }),
   });
-  const data = await res.json();
+  // const data = await res.json();
   // console.log(res.json);
   getLikes(ID, BTN);
-  return data;
+  return res;
 };
 
 export default addLike;
