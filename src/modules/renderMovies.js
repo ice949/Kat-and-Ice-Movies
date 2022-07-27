@@ -3,10 +3,12 @@ import popup from './popwindow.js';
 const { addLike, getLikes } = require('./likes.js');
 
 const MoviesContainer = document.querySelector('.movies');
+const counter = document.querySelector('.count');
 const url = 'https://api.tvmaze.com/shows';
 
 const renderMovie = (movieList) => {
   const movies = (movieList);
+  counter.innerHTML = `(${movies.length})`;
   movies.forEach((movie) => {
     const indmov = document.createElement('div');
     indmov.classList.add('ind-mov');
@@ -58,6 +60,6 @@ const getMovies = async () => {
   const data = await res.json();
   const movieArr = await data.splice(0, 16);
   renderMovie(movieArr);
-  return data;
+  return movieArr;
 };
 export default getMovies;

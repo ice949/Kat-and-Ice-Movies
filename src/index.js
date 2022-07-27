@@ -7,4 +7,5 @@ import renderLikes from './modules/likes.js';
 window.addEventListener('DOMContentLoaded', () => {
   getMovies();
   renderLikes();
+  // console.log(movieArr);
 });

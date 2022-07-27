@@ -4,6 +4,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  color: #fff;
 }
 
 main {
@@ -12,6 +13,7 @@ main {
   align-items: center;
   width: 100%;
   padding: 2% 6%;
+  background-color: #664592;
 }
 
 .main-header {
@@ -26,12 +28,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #000;
-  border-radius: 50%;
+  border: 4px solid #c4b3b3;
+  border-radius: 20%;
   padding: 30px;
   height: 150px;
-  width: 150px;
-  background-color: #bbb;
+  width: 220px;
+  background-color: #15032c;
+  color: #fff;
+  text-align: center;
 }
 
 .main-nav {
@@ -40,12 +44,18 @@ main {
   gap: 30px;
   font-size: 25px;
   padding: 20px;
-  background-color: #bbb;
-  border: 4px solid #000;
+  background-color: #15032c;
+  border: 4px solid #c4b3b3;
+  border-radius: 20%;
 }
 
 .main-nav a {
-  color: rgb(39, 15, 85);
+  color: #fff;
+}
+
+.main-nav a:hover {
+  color: #fff;
+  font-size: 35px;
 }
 
 .movies {
@@ -54,7 +64,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
-  margin: 200px 0;
+  margin: 50px 0;
 }
 
 .ind-mov {
@@ -62,12 +72,23 @@ main {
   flex-direction: column;
   gap: 15px;
   width: 20%;
+  padding: 40px 60px;
+  background: rgba(94, 107, 168, 0.35);
+  border-radius: 5%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgba(94, 107, 168, 0.8);
 }
 
 .ind-mov img {
   width: 100%;
   height: 300px;
   justify-content: space-between;
+}
+
+.ind-mov h3 {
+  color: #fff;
 }
 
 .like-icon {
@@ -78,6 +99,10 @@ main {
   gap: 5px;
 }
 
+i {
+  color: rgb(240, 70, 234);
+}
+
 .name-like {
   display: flex;
   justify-content: space-between;
@@ -85,6 +110,7 @@ main {
 
 button {
   padding: 10px;
+  background-color: #15032c;
 }
 
 .comments-popup {
@@ -104,6 +130,7 @@ button {
   justify-content: flex-end;
   width: 100%;
   padding: 40px;
+  color: #fff;
 }
 
 .desc {
@@ -137,10 +164,14 @@ button {
   height: 95vh;
   align-items: center;
   gap: 20px;
-  border: solid 2px #000;
   top: 5px;
-  background-color: #bbb;
   margin: 1% 5%;
+  background: rgba(94, 107, 168, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid #fff;
 }
 
 .close_div {
@@ -149,6 +180,7 @@ button {
   width: 100%;
   padding: 20px;
   font-size: 35px;
+  color: #fff;
 }
 
 .specs {
@@ -189,6 +221,7 @@ footer {
   width: 100%;
   bottom: 0;
   padding: 2% 5%;
-  background-color: #bbb;
-  border: 4px solid #000;
+  background-color: #15032c;
+  border: 4px solid #fff;
+  border-radius: 20%;
 }
