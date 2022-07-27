@@ -2,8 +2,6 @@ import popup from './popwindow.js';
 
 const { addLike, getLikes } = require('./likes.js');
 
-// import addLike from "./modules/likes";
-
 const MoviesContainer = document.querySelector('.movies');
 const url = 'https://api.tvmaze.com/shows';
 
@@ -47,7 +45,6 @@ const renderMovie = (movieList) => {
       e.preventDefault();
       const { id } = e.target;
       popup(id, movies);
-      // console.log(popup);
     });
 
     const { id } = indmov;

@@ -189,6 +189,6 @@ footer {
   width: 100%;
   bottom: 0;
   padding: 2% 5%;
-  border-top: solid 4px #000;
   background-color: #bbb;
+  border: 4px solid #000;
 }
