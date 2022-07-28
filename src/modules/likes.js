@@ -21,4 +21,4 @@ const addLike = async (ID, BTN) => {
   return res;
 };
 
-module.exports = { addLike, getLikes };
+export { addLike, getLikes };
