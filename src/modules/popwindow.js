@@ -1,3 +1,6 @@
+// import { method } from 'lodash';
+import { addComments, getComments } from './comments.js';
+
 const popupContainer = document.querySelector('.popup');
 
 const popup = (ID, arr) => {
@@ -8,6 +11,7 @@ const popup = (ID, arr) => {
     genre: arr[ID - 1].genre,
     rating: arr[ID - 1].rating.average,
     summary: arr[ID - 1].summary,
+    id: arr[ID - 1].id,
   };
   const popDiv = document.createElement('div');
   popDiv.classList.add('pop_up');
@@ -31,26 +35,31 @@ const popup = (ID, arr) => {
   const commentsDiv = document.createElement('div');
   commentsDiv.classList.add('comments_div');
   const commentHeading = document.createElement('h3');
-  commentHeading.innerHTML = 'Comments <span></span>';
+  commentHeading.innerHTML = 'Comments (<span class="comment-counter"></span>)';
   const commentsContainer = document.createElement('ul');
   commentsContainer.classList.add('coments-container');
+  commentsContainer.id = `${movie.id}`;
 
   commentsDiv.appendChild(commentHeading);
   commentsDiv.appendChild(commentsContainer);
 
   const commentForm = document.createElement('form');
   commentForm.classList.add('comment-form');
+  commentForm.id = `${movie.id}`;
   const formHeading = document.createElement('h3');
   formHeading.innerHTML = 'Add a comment';
   const formInput = document.createElement('input');
+  formInput.classList.add('comment-user');
   formInput.setAttribute('type', 'text');
   formInput.placeholder = 'Your name';
   formInput.id = 'name';
   const textArea = document.createElement('textarea');
+  textArea.classList.add('user-comments');
   textArea.setAttribute('name', 'comment');
   textArea.placeholder = 'Your insights';
   const formButton = document.createElement('button');
   formButton.setAttribute('type', 'submit');
+  formButton.classList.add('submit-Btn');
   formButton.innerHTML = 'Comment';
 
   commentForm.appendChild(formHeading);
@@ -73,5 +82,24 @@ const popup = (ID, arr) => {
     e.preventDefault();
     popupContainer.innerHTML = '';
   });
+
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const commentId = commentForm.id;
+    const name = formInput.value;
+    const commentValue = textArea.value;
+    const commentObj = {
+      id: commentId,
+      name,
+      comment: commentValue,
+    };
+
+    formInput.value = '';
+    textArea.value = '';
+    const comments = commentsContainer;
+    addComments(commentObj, commentId, comments);
+  });
+  getComments(commentForm.id, commentsContainer);
 };
+
 export default popup;
