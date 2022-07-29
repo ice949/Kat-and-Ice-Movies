@@ -174,23 +174,26 @@ button {
   border: 2px solid #fff;
 }
 
-.pop_up img {
-  display: none;
-}
-
 .close_div {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding: 20px;
+  height: 10%;
+  padding:1px 20px;
   font-size: 35px;
   color: #fff;
+}
+
+.img_container {
+  width: 100%;
+  height: 25%;
 }
 
 .specs {
   display: flex;
   justify-content: space-around;
   width: 80%;
+  height: 10%;
 }
 
 .comments_div {
@@ -198,6 +201,7 @@ button {
   flex-direction: column;
   align-items: center;
   width: 80%;
+  height: 25%;
 }
 
 .comment-form {
@@ -206,6 +210,7 @@ button {
   align-items: center;
   width: 80%;
   gap: 20px;
+  height: 20%;
 }
 
 .comment-form input {
