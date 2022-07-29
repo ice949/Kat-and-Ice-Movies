@@ -21,8 +21,10 @@ https://github.com/ice949/Javascript-capstone
 - CSS
 - JavaScript
 - webpack
-
 ## Live Demo
+
+[Kat and Ice Movies](https://timely-pie-1973e1.netlify.app/)
+
 
 ## Get Started
 
