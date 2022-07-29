@@ -1,5 +1,10 @@
 const url3 = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lNpU390CCHAJTJVaQl2q/comments';
 
+const commentCounter = (arr) => {
+  const numComments = document.querySelector('.comment-counter');
+  numComments.innerHTML = arr.length;
+};
+
 const getComments = async (ID, CONTAINER) => {
   const res = await fetch(`${url3}?item_id=${ID}`, {
     method: 'GET',
@@ -7,11 +12,6 @@ const getComments = async (ID, CONTAINER) => {
       'Content-Type': 'application/json',
     },
   });
-
-  const commentCounter = (arr) => {
-    const numComments = document.querySelector('.comment-counter');
-    numComments.innerHTML = arr.length;
-  };
 
   const data = await res.json();
   CONTAINER.innerHTML = '';
@@ -21,6 +21,7 @@ const getComments = async (ID, CONTAINER) => {
     eachComment.innerHTML = `${comment.creation_date} ${comment.username}:${comment.comment}`;
     CONTAINER.append(eachComment);
   });
+
   commentCounter(data);
   return data;
 };
@@ -41,4 +42,4 @@ const addComments = async (COMMENTOBJ, ID, CONTAINER) => {
   return res;
 };
 
-export { addComments, getComments };
+export { addComments, getComments, commentCounter };

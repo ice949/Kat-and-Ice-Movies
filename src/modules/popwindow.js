@@ -18,6 +18,8 @@ const popup = (ID, arr) => {
   const closeDiv = document.createElement('div');
   closeDiv.classList.add('close_div');
   closeDiv.innerHTML = '<i class="fa-solid fa-xmark close-btn"></i>';
+  const imgContainer = document.createElement('div');
+  imgContainer.classList.add('img_container');
   const popImage = document.createElement('img');
   popImage.setAttribute('src', `${movie.image}`);
   const title = document.createElement('h2');
@@ -31,6 +33,7 @@ const popup = (ID, arr) => {
 
   specs1.appendChild(language);
   specs1.appendChild(rating);
+  imgContainer.appendChild(popImage);
 
   const commentsDiv = document.createElement('div');
   commentsDiv.classList.add('comments_div');
