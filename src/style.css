@@ -163,7 +163,7 @@ button {
   width: 90%;
   height: 95vh;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
   top: 5px;
   margin: 1% 5%;
   background: rgba(94, 107, 168, 0.9);
@@ -172,6 +172,9 @@ button {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 2px solid #fff;
+  overflow-y: scroll;
+
+  /* padding-bottom: 30px; */
 }
 
 .close_div {
@@ -209,21 +212,26 @@ button {
   flex-direction: column;
   align-items: center;
   width: 80%;
-  gap: 20px;
-  height: 20%;
+  gap: 5px;
+  min-height: 250px;
+  padding-bottom: 30px;
 }
 
 .comment-form input {
   width: 400px;
-  padding: 15px;
+  padding: 10px;
   color: #000;
 }
 
 .comment-form textarea {
   width: 400px;
   min-height: 100px;
-  padding: 20px;
+  padding: 10px;
   color: #000;
+}
+
+.comment-form button {
+  margin-bottom: 40px;
 }
 
 footer {
