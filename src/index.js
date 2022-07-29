@@ -1,4 +1,10 @@
 import './style.css';
-import component from './modules/component.js';
 
-window.onload = component();
+import { getMovies } from './modules/renderMovies.js';
+
+// import { renderLikes } from './modules/likes.js';
+
+window.addEventListener('DOMContentLoaded', () => {
+  getMovies();
+  // renderLikes();
+});
